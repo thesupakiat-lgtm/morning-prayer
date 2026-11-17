@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f6f1e7">
+  <meta name="description" content="บทสวดมนต์ตอนเช้า พร้อมบทอ่านและแนวทางนั่งสมาธิ ใช้ได้บน GitHub Pages">
+  <title>เช้าวันใหม่ • บทสวดมนต์และสมาธิ</title>
+  <style>
+    :root{--bg:#f6f1e7;--paper:#fffdf8;--ink:#27342c;--muted:#68736c;--gold:#b28444;--gold-dark:#88602c;--gold-soft:#f5e8d1;--line:#e9e3d8;--sage:#dce8df;--green:#38634f;--shadow:0 14px 45px rgba(63,58,43,.07);--radius:22px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 75% -10%,#f5dfb5 0,transparent 39%),linear-gradient(180deg,#fcf9f1 0,var(--bg) 55%,#f4f3ec 100%);color:var(--ink);font-family:Tahoma,"Noto Sans Thai","Leelawadee UI",system-ui,sans-serif;line-height:1.8}
+    button,input{font:inherit}button{cursor:pointer}button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid #ad864a;outline-offset:3px}
+    .container{width:min(1050px,calc(100% - 32px));margin:auto}.nav{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:22px 0}.brand{display:flex;align-items:center;gap:10px;font-size:15px;font-weight:700;letter-spacing:.01em}.brandmark{width:34px;height:34px;display:grid;place-items:center;background:var(--gold-soft);border:1px solid #e4c999;border-radius:12px;color:var(--gold-dark);font-size:20px}.navlinks{display:flex;gap:8px;flex-wrap:wrap}.navlinks a{font-size:13px;color:#67736b;text-decoration:none;padding:7px 10px;border-radius:10px}.navlinks a:hover{background:#f0e9d9;color:var(--ink)}
+    .hero{padding:42px 0 28px;text-align:center}.eyebrow{color:var(--gold-dark);font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}.hero h1{margin:12px 0;font-size:clamp(31px,5vw,54px);line-height:1.32;font-weight:700;letter-spacing:-.035em}.hero h1 em{font-style:normal;color:var(--gold-dark)}.subtitle{margin:0 auto;max-width:600px;color:var(--muted);font-size:15px}.date{margin:16px 0 0;color:var(--gold-dark);font-size:13px}.section{margin:20px 0 36px}.main-grid{display:grid;grid-template-columns:1fr;gap:18px;align-items:stretch}
+    .card{background:rgba(255,253,249,.95);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}.schedule-card{padding:25px 25px 18px}.card-head{display:flex;align-items:flex-start;justify-content:space-between;gap:10px}.card-head h2,.chant-area h2{font-size:21px;line-height:1.5;margin:0}.muted{font-size:13px;color:var(--muted);margin:4px 0 0}.badge{font-size:11px;font-weight:700;background:var(--gold-soft);color:#805d2e;padding:3px 10px;border-radius:99px;white-space:nowrap}.timeline{padding-top:17px}.step{display:flex;align-items:center;gap:13px;width:100%;padding:13px 8px;margin-bottom:6px;background:transparent;border:1px solid transparent;border-radius:14px;text-align:left;color:var(--ink)}.step:hover{background:#faf6ee}.step.active{background:#f6eee0;border-color:#e9d6b6}.step.done .number{background:var(--sage);color:var(--green)}.number{width:32px;height:32px;flex:0 0 32px;background:#f1eee6;color:#7b816f;display:grid;place-items:center;border-radius:11px;font-size:12px;font-weight:700}.step.active .number{background:var(--gold);color:#fff}.step-main{flex:1;min-width:0}.step-title{display:block;font-size:14px;font-weight:700}.step-time{display:block;color:var(--muted);font-size:11px;line-height:1.6}.schedule-footer{border-top:1px solid var(--line);padding-top:14px;margin-top:8px;color:var(--muted);font-size:12px}
+    .section-heading{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:15px}.section-heading h2{font-size:25px;line-height:1.5;margin:0}.eyeline{margin:0;font-size:12px;color:var(--gold-dark);font-weight:700;letter-spacing:.1em}.reading-controls{display:flex;gap:6px}.mini{border:1px solid var(--line);background:var(--paper);border-radius:10px;padding:6px 10px;font-size:13px;color:var(--ink)}.chant-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.chant{padding:23px;scroll-margin-top:16px}.chant.current{border-color:#c9aa70;box-shadow:0 0 0 2px rgba(187,149,85,.15),var(--shadow)}.chant-top{display:flex;align-items:center;justify-content:space-between;gap:10px}.chant-label{font-size:11px;color:var(--gold-dark);font-weight:700}.count{font-size:11px;color:var(--muted);background:#f4f1e9;padding:3px 9px;border-radius:99px}.chant h3{font-size:19px;margin:5px 0 13px}.verse{font-size:var(--verse-size,18px);font-weight:500;line-height:2.05;margin:0;white-space:pre-line}.meaning{color:#627169;font-size:13px;margin:14px 0 0;padding-top:13px;border-top:1px solid var(--line)}.note{color:#8a8c83;font-size:12px;line-height:1.8;margin:12px 0 0}.prayer{background:linear-gradient(130deg,#f9f2e5,#f6f7ed);border-left:3px solid var(--gold);border-radius:12px;padding:15px 18px;margin-top:14px;font-size:15px;line-height:2.05}.fullwide{grid-column:1/-1}.meditation{padding:24px;background:linear-gradient(120deg,rgba(220,232,223,.8),rgba(255,253,248,.9))}.meditation h3{margin:0 0 7px}.meditation p{margin:0;color:#57675c;font-size:14px}
+    details.optional{border-top:1px solid var(--line);padding-top:11px;margin-top:13px}details summary{color:var(--gold-dark);font-size:13px;font-weight:700;cursor:pointer}.footer{text-align:center;color:var(--muted);padding:0 0 45px;font-size:12px}.footer a{color:var(--gold-dark)}
+    @media(max-width:780px){.main-grid{grid-template-columns:1fr}.chant-grid{grid-template-columns:1fr}.hero{padding-top:22px}.nav{padding:16px 0}.schedule-card{padding:20px}.navlinks a{padding:6px}.section-heading{align-items:flex-end}}@media(max-width:390px){.navlinks a{font-size:11px}.hero h1{font-size:30px}.btn{padding:9px 13px;min-height:43px}.card-head h2{font-size:18px}.chant{padding:19px}.verse{font-size:calc(var(--verse-size,18px) - 1px)}}
+    @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important}}
+    @media print{body{background:#fff}.navlinks,.reading-controls{display:none!important}.container{width:100%}.main-grid,.chant-grid{display:block}.card{box-shadow:none;break-inside:avoid;margin-bottom:10px}.hero{padding:10px}.footer{padding-bottom:0}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <nav class="nav" aria-label="เมนูหลัก">
+      <div class="brand"><span class="brandmark" aria-hidden="true">☀</span><span>เช้าวันใหม่</span></div>
+      <div class="navlinks"><a href="#practice">ลำดับการสวด</a><a href="#chants">บทสวด</a><a href="#meditation">สมาธิ</a></div>
+    </nav>
+    <header class="hero">
+      <div class="eyebrow">MORNING MINDFULNESS</div>
+      <h1>เริ่มต้นวันใหม่<br><em>ด้วยสติและเมตตา</em></h1>
+      <p class="subtitle">บทสวดมนต์และแนวทางนั่งสมาธิตอนเช้า<br>เพื่อความสงบในใจ การงาน และความร่มเย็นในครอบครัว</p>
+      <p class="date" id="today" aria-label="วันที่วันนี้"></p>
+    </header>
+    <main>
+      <section class="main-grid section" id="practice" aria-label="ลำดับกิจวัตรตอนเช้า">
+        <div class="card schedule-card">
+          <div class="card-head"><div><h2>ลำดับการสวดมนต์ตอนเช้า</h2><p class="muted">แตะหัวข้อเพื่อเลื่อนไปอ่านบทสวดได้เลย • อ่านบทสวดได้ตามลำดับ</p></div></div>
+          <div class="timeline" id="schedule">
+            <button type="button" class="step active" data-index="0"><span class="number">01</span><span class="step-main"><span class="step-title">นะโม 3 จบ</span><span class="step-time">ตั้งจิตระลึกถึงพระรัตนตรัย</span></span></button>
+            <button type="button" class="step" data-index="1"><span class="number">02</span><span class="step-main"><span class="step-title">มงกุฎพระพุทธเจ้า 9 จบ</span><span class="step-time">ระลึกถึงพุทธคุณ</span></span></button>
+            <button type="button" class="step" data-index="2"><span class="number">03</span><span class="step-main"><span class="step-title">อิติปิโส 1 จบ</span><span class="step-time">ระลึกถึงพระพุทธคุณ</span></span></button>
+            <button type="button" class="step" data-index="3"><span class="number">04</span><span class="step-main"><span class="step-title">แผ่เมตตาและอธิษฐาน</span><span class="step-time">ถึงตนเอง ครอบครัว และผู้ร่วมงาน</span></span></button>
+            <button type="button" class="step" data-index="4"><span class="number">05</span><span class="step-main"><span class="step-title">นั่งสมาธิ</span><span class="step-time">รู้ลมหายใจเข้า–ออก</span></span></button>
+          </div>
+          <p class="schedule-footer">สวดตามจังหวะที่สบาย อ่านจากหน้าจอได้ ไม่จำเป็นต้องท่องจำ</p>
+        </div>
+      </section>
+      <section class="section chant-area" id="chants">
+        <div class="section-heading"><div><p class="eyeline">READ ALONG</p><h2>บทสวดมนต์ตอนเช้า</h2></div><div class="reading-controls" aria-label="ปรับขนาดตัวอักษร"><button type="button" class="mini" id="decreaseFont" aria-label="ลดขนาดตัวอักษร">ก−</button><button type="button" class="mini" id="increaseFont" aria-label="เพิ่มขนาดตัวอักษร">ก+</button></div></div>
+        <div class="chant-grid">
+          <article class="card chant current" id="chant-0"><div class="chant-top"><span class="chant-label">บทที่ 01</span><span class="count">3 จบ</span></div><h3>นะโม</h3><p class="verse">นะโม ตัสสะ ภะคะวะโต<br>อะระหะโต สัมมาสัมพุทธัสสะ</p><p class="meaning">นอบน้อมแด่พระผู้มีพระภาคเจ้า ผู้เป็นพระอรหันต์ ตรัสรู้ชอบได้โดยพระองค์เอง</p></article>
+          <article class="card chant" id="chant-1"><div class="chant-top"><span class="chant-label">บทที่ 02</span><span class="count">9 จบ</span></div><h3>มงกุฎพระพุทธเจ้า</h3><p class="verse">อิติปิโส วิเสเสอิ<br>อิเสเส พุทธะนาเมอิ<br>อิเมนา พุทธะตังโสอิ<br>อิโสตัง พุทธะปิติอิ</p><p class="note">แสดงฉบับสั้น 4 วรรคที่นิยมสวด หากบทที่คุณสวดประจำมีวรรคเพิ่มเติม ให้ใช้ตามฉบับที่คุ้นเคยได้</p></article>
+          <article class="card chant" id="chant-2"><div class="chant-top"><span class="chant-label">บทที่ 03</span><span class="count">1 จบ</span></div><h3>อิติปิโส (พุทธคุณ)</h3><p class="verse">อิติปิ โส ภะคะวา อะระหัง<br>สัมมาสัมพุทโธ<br>วิชชาจะระณะสัมปันโน สุคะโต โลกะวิทู<br>อะนุตตะโร ปุริสะทัมมะสาระถิ<br>สัตถา เทวะมะนุสสานัง<br>พุทโธ ภะคะวาติ</p><p class="meaning">ระลึกถึงพระคุณของพระพุทธเจ้าเพื่อเจริญศรัทธา สติ และปัญญา</p></article>
+          <article class="card chant" id="chant-3"><div class="chant-top"><span class="chant-label">บทที่ 04</span><span class="count">ตั้งจิตแผ่เมตตา</span></div><h3>แผ่เมตตาและตั้งจิต</h3><p class="verse">สัพเพ สัตตา อะเวรา โหนตุ<br>อัพยาปัชฌา โหนตุ<br>อะนีฆา โหนตุ<br>สุขี อัตตานัง ปะริหะรันตุ</p><p class="meaning">ขอให้สรรพสัตว์ไม่มีเวร ไม่เบียดเบียนกัน ปราศจากทุกข์ และรักษาตนให้เป็นสุข</p><div class="prayer">ขอให้ข้าพเจ้ามีสติปัญญาในการทำงาน มีความก้าวหน้าด้วยความสามารถและความดี<br><br>ขอให้มีความสัมพันธ์ที่ดีกับผู้บังคับบัญชาและเพื่อนร่วมงาน<br><br>ขอให้ครอบครัวมีความรัก ความเข้าใจ และความสงบสุข<br><br>ขอให้ข้าพเจ้ามีจิตใจมั่นคงและดำเนินชีวิตด้วยความไม่ประมาท</div><details class="optional"><summary>อ่านกรณียเมตตสูตรท่อนสั้นเพิ่มเติม (ไม่บังคับ)</summary><p class="verse" style="margin-top:10px">สุขิโน วา เขมิโน โหนตุ<br>สัพเพ สัตตา ภะวันตุ สุขิตัตตา</p><p class="meaning">ขอให้สรรพสัตว์ทั้งหลายเป็นสุข ปลอดภัย และมีใจเป็นสุข</p></details></article>
+          <article class="card meditation fullwide" id="meditation"><h3>05 · นั่งสมาธิ</h3><p>นั่งในท่าที่สบาย หลับตาหรือทอดสายตาต่ำ ๆ รับรู้ลมหายใจเข้า–ออกตามธรรมชาติ เมื่อมีความคิดเกิดขึ้น เพียงรู้ตัวแล้วกลับมาที่ลมหายใจ ไม่ต้องบังคับจิตให้นิ่ง</p></article>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">ทำต่อเนื่องด้วยความตั้งใจและสติ ไม่จำเป็นต้องเร่งรีบ<br>บทสวดและการเจริญสติเป็นแนวทางฝึกจิต ไม่ใช่คำรับประกันผลด้านโชคลาภหรือการงาน<br>อ้างอิงท่อนกรณียเมตตสูตร: <a href="https://84000.org/pray/karaniya-metta-sutta.html" target="_blank" rel="noopener noreferrer">84000.org</a></footer>
+  </div>
+  <script>
+    (() => {
+      'use strict';
+      let fontSize = 18;
+      const adjustFont = delta => {
+        fontSize = Math.max(14, Math.min(28, fontSize + delta));
+        document.documentElement.style.setProperty('--verse-size', fontSize + 'px');
+      };
+      document.getElementById('increaseFont').addEventListener('click', () => adjustFont(2));
+      document.getElementById('decreaseFont').addEventListener('click', () => adjustFont(-2));
+      document.querySelectorAll('.step').forEach(button => {
+        button.addEventListener('click', () => {
+          const index = Number(button.dataset.index);
+          const target = document.getElementById(index === 4 ? 'meditation' : 'chant-' + index);
+          document.querySelectorAll('.step').forEach(step => step.classList.remove('active'));
+          button.classList.add('active');
+          target?.scrollIntoView({behavior: 'smooth', block: 'start'});
+        });
+      });
+      try {
+        document.getElementById('today').textContent = new Intl.DateTimeFormat('th-TH', {
+          weekday: 'long', day: 'numeric', month: 'long', year: 'numeric'
+        }).format(new Date());
+      } catch (error) {
+        document.getElementById('today').textContent = '';
+      }
+    })();
+  </script>
+</body>
+</html>
